@@ -1,19 +1,26 @@
 ﻿<!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traseen International | Glass Design</title>
+    <title>Traseen International | Global Business Presence</title>
     <meta
       name="description"
-      content="Traseen International company profile with modern glassmorphism design and optimized WebP media."
+      content="Traseen International delivers premium digital experiences with strategic design, high-performance web solutions, and global brand execution."
     />
+    <meta name="keywords" content="Traseen International, business website, digital strategy, web performance, global branding" />
+    <meta property="og:title" content="Traseen International | Global Business Presence" />
+    <meta
+      property="og:description"
+      content="Premium digital solutions for ambitious companies seeking measurable growth and professional market positioning."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/gallery-01.webp" />
+    <meta name="theme-color" content="#121212" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -22,105 +29,115 @@
     <div class="bg-grid"></div>
 
     <header class="site-header glass-card">
-      <a class="brand" href="#home">Traseen International</a>
-      <button class="menu-toggle" aria-label="Toggle menu">Menu</button>
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#home" data-i18n="brand">Traseen International</a>
+
+      <div class="header-actions desktop-only">
+        <button class="icon-btn" id="langToggle" aria-label="Switch language">AR</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">Light</button>
+      </div>
+
+      <button class="menu-toggle mobile-only" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links desktop-only" aria-label="Primary Navigation">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
       </nav>
     </header>
 
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <aside class="mobile-panel glass-card" id="mobilePanel" aria-hidden="true">
+      <div class="mobile-panel-head">
+        <strong data-i18n="menuTitle">Menu</strong>
+        <button class="icon-btn" id="mobileClose" aria-label="Close menu">X</button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile Navigation">
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#services" data-i18n="navServices">Services</a>
+        <a href="#gallery" data-i18n="navGallery">Gallery</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="mobile-controls">
+        <button class="icon-btn" id="langToggleMobile" aria-label="Switch language">AR</button>
+        <button class="icon-btn" id="themeToggleMobile" aria-label="Toggle theme">Light</button>
+      </div>
+    </aside>
+
     <main>
-      <section id="home" class="hero reveal">
+      <section id="home" class="hero" data-aos="fade-up">
         <article class="hero-copy glass-card">
-          <p class="kicker">Creative Digital Presence</p>
-          <h1>Professional web identity with a modern glass style.</h1>
-          <p>
-            Rebuilt with cleaner structure, optimized WebP assets, and a premium visual direction
-            suitable for a modern international brand.
+          <p class="kicker" data-i18n="kicker">Global Digital Leadership</p>
+          <h1 data-i18n="heroTitle">We build business websites that communicate authority and drive growth.</h1>
+          <p data-i18n="heroDesc">
+            From strategic positioning to high-performance implementation, Traseen International helps brands present a stronger market image and convert attention into results.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">Start a Project</a>
-            <a class="btn btn-ghost" href="#gallery">See Work</a>
+            <a class="btn btn-primary" href="#contact" data-i18n="ctaPrimary">Start Your Project</a>
+            <a class="btn btn-ghost" href="#services" data-i18n="ctaSecondary">Explore Services</a>
           </div>
         </article>
         <figure class="hero-media glass-card">
-          <img src="assets/images/gallery-01.webp" alt="Traseen hero" loading="eager" />
+          <img src="assets/images/gallery-01.webp" alt="Corporate visual for Traseen International hero section" loading="eager" />
         </figure>
       </section>
 
-      <section id="about" class="split reveal">
+      <section id="about" class="split" data-aos="fade-up" data-aos-delay="80">
         <article class="glass-card panel">
-          <h2>About Traseen</h2>
-          <p>
-            We help businesses present their value with high-impact design, clear messaging,
-            and faster front-end performance.
+          <h2 data-i18n="aboutTitle">About Traseen</h2>
+          <p data-i18n="aboutDesc">
+            We partner with ambitious organizations to craft premium digital experiences that balance executive-level design standards with measurable business outcomes.
           </p>
         </article>
         <figure class="glass-card panel-image">
-          <img src="assets/images/gallery-02.webp" alt="Traseen feature" loading="lazy" />
+          <img src="assets/images/gallery-02.webp" alt="Professional team and business communication visual" loading="lazy" />
         </figure>
       </section>
 
-      <section id="services" class="services reveal">
-        <h2>Core Services</h2>
+      <section id="services" class="services" data-aos="fade-up" data-aos-delay="120">
+        <h2 data-i18n="servicesTitle">Core Services</h2>
         <div class="service-grid">
           <article class="glass-card service-card">
-            <h3>Brand Websites</h3>
-            <p>Fast, elegant and conversion-ready website experiences.</p>
+            <h3 data-i18n="service1Title">Corporate Website Development</h3>
+            <p data-i18n="service1Desc">Scalable, responsive, and conversion-focused websites tailored for global audiences.</p>
           </article>
           <article class="glass-card service-card">
-            <h3>Visual Direction</h3>
-            <p>Consistent typography, color systems, and premium brand look.</p>
+            <h3 data-i18n="service2Title">Brand Experience Design</h3>
+            <p data-i18n="service2Desc">Unified visual systems that increase trust, recognition, and perceived market value.</p>
           </article>
           <article class="glass-card service-card">
-            <h3>Performance Cleanup</h3>
-            <p>Media optimization and structure refactors for maintainability.</p>
+            <h3 data-i18n="service3Title">Performance Optimization</h3>
+            <p data-i18n="service3Desc">Technical optimization, media compression, and structural cleanup for faster delivery.</p>
           </article>
         </div>
       </section>
 
-      <section id="gallery" class="gallery reveal">
-        <h2>Visual Gallery</h2>
+      <section id="gallery" class="gallery" data-aos="fade-up" data-aos-delay="150">
+        <h2 data-i18n="galleryTitle">Project Gallery</h2>
         <div class="gallery-grid">
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-01.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-02.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-03.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-04.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-05.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-06.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-07.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
-        <figure class="glass-card gallery-item reveal">
-          <img src="assets/images/gallery-08.webp" alt="Traseen visual" loading="lazy" />
-        </figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-01.webp" alt="Business project preview image 1" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-02.webp" alt="Business project preview image 2" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-03.webp" alt="Business project preview image 3" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-04.webp" alt="Business project preview image 4" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-05.webp" alt="Business project preview image 5" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-06.webp" alt="Business project preview image 6" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-07.webp" alt="Business project preview image 7" loading="lazy" /></figure>
+          <figure class="glass-card gallery-item"><img src="assets/images/gallery-08.webp" alt="Business project preview image 8" loading="lazy" /></figure>
         </div>
       </section>
 
-      <section id="contact" class="contact reveal">
+      <section id="contact" class="contact" data-aos="fade-up" data-aos-delay="180">
         <article class="glass-card contact-card">
-          <h2>Contact</h2>
-          <p>Email: info@traseen.com</p>
-          <p>Phone: +20 000 000 0000</p>
+          <h2 data-i18n="contactTitle">Contact</h2>
+          <p><span data-i18n="emailLabel">Email:</span> info@traseen.com</p>
+          <p><span data-i18n="phoneLabel">Phone:</span> +20 000 000 0000</p>
         </article>
       </section>
     </main>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
